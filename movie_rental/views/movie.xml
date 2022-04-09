@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- Tree View -->
+    <record id="movie_view_tree" model="ir.ui.view">
+        <field name="name">movie.view.tree</field>
+        <field name="model">movie.movie</field>
+        <field name="arch" type="xml">
+            <tree string="Movie">
+                <field name="name" />
+                <field name="year" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="movie_view_form" model="ir.ui.view">
+        <field name="name">movie.view.form</field>
+        <field name="model">movie.movie</field>
+        <field name="arch" type="xml">
+            <form string="Movie">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="year" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
     <record id="movie_action" model="ir.actions.act_window">
         <field name="name">Movie</field>
